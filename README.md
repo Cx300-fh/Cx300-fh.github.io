@@ -1,6 +1,6 @@
-# Cx300-fh.github.io
+# 李雨欣 / Cx300-fh.github.io
 
-Claude Code inspired personal homepage for `Cx300-fh`.
+Claude inspired personal homepage for 李雨欣 / `Cx300-fh`.
 
 ## Preview
 
@@ -22,3 +22,7 @@ GitHub Pages will publish the site at:
 https://Cx300-fh.github.io
 ```
 
+## Edit
+
+- `index.html`: edit Info, Professional, Bookshelf, and CV sections.
+- `cv/Li-Yuxin-CV.md`: replace this placeholder with your real CV, or upload a PDF and update the download link.
