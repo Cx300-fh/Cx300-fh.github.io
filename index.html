@@ -23,21 +23,47 @@
 
     <main class="app-shell" id="top">
       <header class="topbar">
-        <a class="brand" href="#info" data-tab-link="info" aria-label="Yuxin Li home">
-          <img src="./assets/site-mark.svg" alt="" width="34" height="34" />
-          <span>Yuxin Li</span>
-        </a>
+        <div class="topbar-row">
+          <a class="brand" href="#info" data-tab-link="info" aria-label="Yuxin Li home">
+            <img src="./assets/site-mark.svg" alt="" width="34" height="34" />
+            <span>Yuxin Li</span>
+          </a>
+
+          <button class="theme-button" type="button" data-theme-toggle aria-label="切换明暗主题">
+            <span aria-hidden="true">◐</span>
+          </button>
+        </div>
 
         <nav class="tabbar" aria-label="主页内容标签">
-          <button class="tab-button is-active" type="button" data-tab="info">Info</button>
-          <button class="tab-button" type="button" data-tab="professional">Professional</button>
-          <button class="tab-button" type="button" data-tab="bookshelf">Bookshelf</button>
-          <button class="tab-button" type="button" data-tab="cv">CV</button>
+          <button class="tab-button is-active" type="button" data-tab="info" aria-selected="true">
+            <span class="tab-index">01</span>
+            <span class="tab-copy">
+              <strong>Info</strong>
+              <small>Profile</small>
+            </span>
+          </button>
+          <button class="tab-button" type="button" data-tab="professional" aria-selected="false">
+            <span class="tab-index">02</span>
+            <span class="tab-copy">
+              <strong>Professional</strong>
+              <small>Blog / Project / Repo</small>
+            </span>
+          </button>
+          <button class="tab-button" type="button" data-tab="bookshelf" aria-selected="false">
+            <span class="tab-index">03</span>
+            <span class="tab-copy">
+              <strong>Bookshelf</strong>
+              <small>Books & films</small>
+            </span>
+          </button>
+          <button class="tab-button" type="button" data-tab="cv" aria-selected="false">
+            <span class="tab-index">04</span>
+            <span class="tab-copy">
+              <strong>CV</strong>
+              <small>Download</small>
+            </span>
+          </button>
         </nav>
-
-        <button class="theme-button" type="button" data-theme-toggle aria-label="切换明暗主题">
-          <span aria-hidden="true">◐</span>
-        </button>
       </header>
 
       <section class="hero-card" aria-label="个人概览">
@@ -77,7 +103,7 @@
       </section>
 
       <section class="workspace" id="content" aria-live="polite">
-        <section class="tab-panel is-active" id="panel-info" data-panel="info">
+        <section class="tab-panel is-active" id="panel-info" data-panel="info" aria-label="Info">
           <div class="panel-heading">
             <p>01</p>
             <h2>Info</h2>
@@ -121,7 +147,7 @@
           </article>
         </section>
 
-        <section class="tab-panel" id="panel-professional" data-panel="professional" hidden>
+        <section class="tab-panel" id="panel-professional" data-panel="professional" aria-label="Professional" hidden>
           <div class="panel-heading">
             <p>02</p>
             <h2>Professional</h2>
@@ -203,7 +229,7 @@
           </article>
         </section>
 
-        <section class="tab-panel" id="panel-bookshelf" data-panel="bookshelf" hidden>
+        <section class="tab-panel" id="panel-bookshelf" data-panel="bookshelf" aria-label="Bookshelf" hidden>
           <div class="panel-heading">
             <p>03</p>
             <h2>Bookshelf</h2>
@@ -228,7 +254,7 @@
           </div>
         </section>
 
-        <section class="tab-panel" id="panel-cv" data-panel="cv" hidden>
+        <section class="tab-panel" id="panel-cv" data-panel="cv" aria-label="CV" hidden>
           <div class="panel-heading">
             <p>04</p>
             <h2>CV</h2>

@@ -93,15 +93,20 @@ img {
   top: 14px;
   z-index: 20;
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr) 44px;
-  align-items: center;
-  gap: 18px;
+  gap: 12px;
   border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
   border-radius: 24px;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   box-shadow: 0 18px 50px rgba(52, 42, 31, 0.08);
   padding: 12px;
   backdrop-filter: blur(18px);
+}
+
+.topbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .brand {
@@ -120,36 +125,96 @@ img {
 .tabbar {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
+  gap: 10px;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--paper-2);
-  padding: 5px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 7%, transparent), transparent 48%),
+    var(--paper-2);
+  padding: 8px;
 }
 
 .tab-button {
-  min-height: 42px;
-  border: 0;
-  border-radius: 13px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 70px;
+  border: 1px solid transparent;
+  border-radius: 16px;
   background: transparent;
   color: var(--muted);
   cursor: pointer;
   font-weight: 760;
   letter-spacing: 0;
+  padding: 12px;
+  text-align: left;
   transition:
     background 160ms ease,
+    border-color 160ms ease,
     color 160ms ease,
     transform 160ms ease;
 }
 
 .tab-button:hover {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--line));
   color: var(--ink);
 }
 
 .tab-button.is-active {
   background: var(--paper);
+  border-color: color-mix(in srgb, var(--accent) 52%, var(--line));
   color: var(--ink);
-  box-shadow: 0 10px 24px rgba(52, 42, 31, 0.1);
+  box-shadow: 0 14px 30px rgba(52, 42, 31, 0.14);
+}
+
+.tab-button.is-active::before {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  content: "";
+}
+
+.tab-index {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.78rem;
+}
+
+.tab-copy {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  padding-bottom: 4px;
+}
+
+.tab-copy strong,
+.tab-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab-copy strong {
+  font-size: 0.98rem;
+}
+
+.tab-copy small {
+  color: var(--soft);
+  font-size: 0.74rem;
+  font-weight: 700;
 }
 
 .theme-button {
@@ -491,19 +556,6 @@ time,
 }
 
 @media (max-width: 940px) {
-  .topbar {
-    grid-template-columns: minmax(0, 1fr) 44px;
-  }
-
-  .tabbar {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  .theme-button {
-    justify-self: end;
-  }
-
   .hero-card {
     grid-template-columns: 180px minmax(0, 1fr);
   }
@@ -529,6 +581,10 @@ time,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tab-button {
+    min-height: 64px;
+  }
+
   .hero-card,
   .panel-grid.two,
   .cv-block,
@@ -552,10 +608,6 @@ time,
 }
 
 @media (max-width: 480px) {
-  .brand span {
-    display: none;
-  }
-
   .hero-copy h1 {
     font-size: 3.35rem;
   }
@@ -575,6 +627,16 @@ time,
     align-items: flex-start;
     flex-direction: column;
     gap: 2px;
+  }
+
+  .tab-button {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .tab-index {
+    width: 30px;
+    height: 28px;
   }
 }
 
