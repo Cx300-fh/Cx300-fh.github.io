@@ -1,6 +1,6 @@
-# 李雨欣 / Cx300-fh.github.io
+# 李雨欣 / Yuxin Li
 
-Claude inspired personal homepage for 李雨欣 / `Cx300-fh`.
+Personal homepage for 李雨欣 / `Cx300-fh`, redesigned with a clean academic profile structure inspired by PRISM.
 
 ## Preview
 
@@ -25,4 +25,5 @@ https://Cx300-fh.github.io
 ## Edit
 
 - `index.html`: edit Info, Professional, Bookshelf, and CV sections.
+- `assets/profile.jpg`: profile photo.
 - `cv/Li-Yuxin-CV.md`: replace this placeholder with your real CV, or upload a PDF and update the download link.
