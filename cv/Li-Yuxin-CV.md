@@ -1,26 +1,31 @@
-# 李雨欣 CV
+# 李雨欣 / Yuxin Li
 
-> 这是可下载 CV 的占位文件。你可以把这里替换成正式简历内容，或者上传 PDF 后把网页里的链接改成 PDF 文件。
-
-## Basic Information
-
-- Name: 李雨欣
-- Affiliation: 清华大学新雅书院 2024 级
-- Email: 待填写
-- GitHub: https://github.com/Cx300-fh
+Undergraduate student, Xinya College, Tsinghua University, Class of 2024.
 
 ## Education
 
-- 待填写：学校 / 时间 / 项目 / 课程 / 荣誉
+- 2024 - Present: Tsinghua University, Xinya College
+- GPA: 3.7 / 4.0
+- Rank: 44 / 131
 
-## Social Work
+## Research & Projects
 
-- 待填写：组织 / 职务 / 时间 / 主要工作
+- 2025 - Present: Research in Prof. Yueqi Duan's embodied intelligence group
+- Oct 2025 - Present: SRT project on future-world prediction with large language models
+- Mar 2025 - Jun 2025: Cognitive olfaction research at Future Lab
+- Paper: *Effect of Half-self-selected Scents on Code Compiling Performance*
+- Sep 2025 - Nov 2025: Intelligent robotic dog design course, Best Algorithm Award
+- Jun 2025 - Oct 2025: Tencent AI Open Competition, embodied intelligence track, national rank 13 in semifinal and 25 in final
+- Jul 2025 - Sep 2025: Electronic Engineering Hardware Design Competition, Excellence Award
 
-## Projects
+## Campus Roles
 
-- 待填写：项目名称 / 时间 / 简介 / 链接
+- 2025 - Present: Youth League branch secretary, Xinya 42
+- 2025: Deputy director, audio-video department, student press corps; Outstanding Reporter of the Year
+- 2024 - 2025: Student work practice group, Tsinghua Youth League Committee
+- 2024 - 2025: External relations department, Tsinghua Student Union
 
-## Skills
+## Contact
 
-- 待填写
+- GitHub: https://github.com/Cx300-fh
+- Email: to be filled
