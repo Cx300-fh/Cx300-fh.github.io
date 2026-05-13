@@ -11,7 +11,7 @@
     <meta property="og:title" content="李雨欣 | Yuxin Li" />
     <meta
       property="og:description"
-      content="Tsinghua University, Xinya College. Research, projects, bookshelf and CV."
+      content="Tsinghua University, Xinya College. Info, professional work, bookshelf and CV."
     />
     <meta property="og:type" content="website" />
     <title>李雨欣 | Yuxin Li</title>
@@ -19,138 +19,127 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到正文</a>
+    <a class="skip-link" href="#content">跳到正文</a>
 
-    <header class="site-header" data-elevated="false">
-      <a class="brand" href="#top" aria-label="李雨欣 home">
-        <img src="./assets/site-mark.svg" alt="" width="32" height="32" />
-        <span>Yuxin Li</span>
-      </a>
+    <main class="app-shell" id="top">
+      <header class="topbar">
+        <a class="brand" href="#info" data-tab-link="info" aria-label="Yuxin Li home">
+          <img src="./assets/site-mark.svg" alt="" width="34" height="34" />
+          <span>Yuxin Li</span>
+        </a>
 
-      <nav class="nav-rail" aria-label="主导航">
-        <a href="#info">Info</a>
-        <a href="#professional">Professional</a>
-        <a href="#bookshelf">Bookshelf</a>
-        <a href="#cv">CV</a>
-      </nav>
+        <nav class="tabbar" aria-label="主页内容标签">
+          <button class="tab-button is-active" type="button" data-tab="info">Info</button>
+          <button class="tab-button" type="button" data-tab="professional">Professional</button>
+          <button class="tab-button" type="button" data-tab="bookshelf">Bookshelf</button>
+          <button class="tab-button" type="button" data-tab="cv">CV</button>
+        </nav>
 
-      <button class="theme-button" type="button" data-theme-toggle aria-label="切换明暗主题">
-        <span aria-hidden="true">◐</span>
-      </button>
-    </header>
+        <button class="theme-button" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </header>
 
-    <main class="page-shell" id="main">
-      <aside class="profile-card" id="top" aria-label="个人简介">
-        <img class="portrait" src="./assets/profile.jpg" alt="李雨欣头像" />
-        <div class="profile-copy">
-          <p class="kicker">Cx300-fh</p>
+      <section class="hero-card" aria-label="个人概览">
+        <div class="portrait-wrap">
+          <img class="portrait" src="./assets/profile.jpg" alt="李雨欣头像" />
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Cx300-fh / Personal Homepage</p>
           <h1>李雨欣</h1>
           <p class="english-name">Yuxin Li</p>
           <p class="affiliation">清华大学新雅书院 2024 级</p>
           <p class="summary">
-            Interested in embodied intelligence, AI systems, and the way models can
-            help people think, build, and learn.
+            Embodied intelligence, large language models, computer vision.
           </p>
+          <div class="quick-links" aria-label="快速链接">
+            <a href="https://github.com/Cx300-fh">GitHub</a>
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="./cv/Li-Yuxin-CV.md" download>Download CV</a>
+          </div>
         </div>
-        <div class="profile-links" aria-label="个人链接">
-          <a href="https://github.com/Cx300-fh">GitHub</a>
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="./cv/Li-Yuxin-CV.md" download>CV</a>
-        </div>
-      </aside>
 
-      <div class="content-flow">
-        <section class="panel" id="info">
-          <div class="section-title">
-            <span>01</span>
+        <aside class="stat-board" aria-label="个人数据">
+          <div>
+            <span>GPA</span>
+            <strong>3.7 / 4.0</strong>
+          </div>
+          <div>
+            <span>Rank</span>
+            <strong>44 / 131</strong>
+          </div>
+          <div>
+            <span>Class</span>
+            <strong>2024</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace" id="content" aria-live="polite">
+        <section class="tab-panel is-active" id="panel-info" data-panel="info">
+          <div class="panel-heading">
+            <p>01</p>
             <h2>Info</h2>
           </div>
-
-          <div class="lead-block">
-            <p>
-              I am an undergraduate student at Xinya College, Tsinghua University.
-              My current interests include embodied intelligence, large language
-              models, cognitive experiments, and human-centered AI tools.
-            </p>
-          </div>
-
-          <div class="info-grid">
-            <div class="metric">
-              <span>GPA</span>
-              <strong>3.7 / 4.0</strong>
-            </div>
-            <div class="metric">
-              <span>Rank</span>
-              <strong>44 / 131</strong>
-            </div>
-            <div class="metric">
-              <span>Class</span>
-              <strong>2024</strong>
-            </div>
-          </div>
-
-          <div class="two-column">
-            <div>
+          <div class="panel-grid two">
+            <article class="content-block intro-block">
+              <h3>About</h3>
+              <p>
+                I am an undergraduate student at Xinya College, Tsinghua University.
+                This page keeps a concise record of my education, research interests,
+                professional work, reading, films, and CV.
+              </p>
+            </article>
+            <article class="content-block">
               <h3>Education</h3>
               <ul class="timeline">
                 <li>
                   <time>2024 - Present</time>
-                  <p><strong>Tsinghua University</strong>, Xinya College</p>
+                  <div>
+                    <strong>Tsinghua University</strong>
+                    <span>Xinya College</span>
+                  </div>
                 </li>
                 <li>
-                  <time>To fill</time>
-                  <p>Major / program / selected coursework / honors.</p>
+                  <time>Major</time>
+                  <div>
+                    <strong>Electronic Engineering</strong>
+                    <span>Selected coursework, honors, and academic interests.</span>
+                  </div>
                 </li>
               </ul>
-            </div>
-            <div>
-              <h3>Campus Roles</h3>
-              <ul class="timeline">
-                <li>
-                  <time>2025 - Present</time>
-                  <p>新雅 42 团支书</p>
-                </li>
-                <li>
-                  <time>2025</time>
-                  <p>记者团音视频部副部长，年度优秀记者</p>
-                </li>
-                <li>
-                  <time>2024 - 2025</time>
-                  <p>校团委学生工作实践组骨干；校学生会外联部骨干</p>
-                </li>
-              </ul>
-            </div>
+            </article>
           </div>
+          <article class="content-block">
+            <h3>Campus Roles</h3>
+            <ul class="compact-list">
+              <li><span>2025 - Present</span><strong>新雅 42 团支书</strong></li>
+              <li><span>2025</span><strong>记者团音视频部副部长，年度优秀记者</strong></li>
+              <li><span>2024 - 2025</span><strong>校团委学生工作实践组骨干；校学生会外联部骨干</strong></li>
+            </ul>
+          </article>
         </section>
 
-        <section class="panel" id="professional">
-          <div class="section-title">
-            <span>02</span>
+        <section class="tab-panel" id="panel-professional" data-panel="professional" hidden>
+          <div class="panel-heading">
+            <p>02</p>
             <h2>Professional</h2>
           </div>
 
-          <div class="professional-tabs" aria-label="专业内容">
-            <a href="#blog">
-              <span>Blog</span>
-              <strong>Notes & essays</strong>
-            </a>
-            <a href="#projects">
-              <span>Project</span>
-              <strong>Research & builds</strong>
-            </a>
-            <a href="https://github.com/Cx300-fh?tab=repositories">
-              <span>Repository</span>
-              <strong>Code archive</strong>
-            </a>
+          <div class="subtabs" aria-label="专业内容子栏目">
+            <a href="#blog">Blog</a>
+            <a href="#projects">Project</a>
+            <a href="https://github.com/Cx300-fh?tab=repositories">Repository</a>
           </div>
 
-          <div class="subsection" id="projects">
+          <article class="content-block" id="projects">
             <h3>Research & Projects</h3>
             <ul class="record-list">
               <li>
                 <time>2025 - Now</time>
                 <div>
-                  <strong>段岳圻教授具身智能课题组研究</strong>
+                  <strong>Yueqi,Duan</strong>
                   <p>Research on embodied intelligence. Details can be expanded later.</p>
                 </div>
               </li>
@@ -193,9 +182,9 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </article>
 
-          <div class="subsection" id="blog">
+          <article class="content-block" id="blog">
             <h3>Blog</h3>
             <ul class="link-list">
               <li>
@@ -211,51 +200,50 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </article>
         </section>
 
-        <section class="panel" id="bookshelf">
-          <div class="section-title">
-            <span>03</span>
+        <section class="tab-panel" id="panel-bookshelf" data-panel="bookshelf" hidden>
+          <div class="panel-heading">
+            <p>03</p>
             <h2>Bookshelf</h2>
           </div>
-          <div class="shelf-grid">
-            <div>
+          <div class="panel-grid two">
+            <article class="content-block">
               <h3>Recently Reading</h3>
               <ul class="shelf-list">
                 <li><span>Book</span><strong>待填写书名</strong></li>
                 <li><span>Book</span><strong>待填写书名</strong></li>
                 <li><span>Book</span><strong>待填写书名</strong></li>
               </ul>
-            </div>
-            <div>
+            </article>
+            <article class="content-block">
               <h3>Recently Watched</h3>
               <ul class="shelf-list">
                 <li><span>Film</span><strong>待填写电影名</strong></li>
                 <li><span>Film</span><strong>待填写电影名</strong></li>
                 <li><span>Film</span><strong>待填写电影名</strong></li>
               </ul>
-            </div>
+            </article>
           </div>
         </section>
 
-        <section class="panel cv-panel" id="cv">
-          <div class="section-title">
-            <span>04</span>
+        <section class="tab-panel" id="panel-cv" data-panel="cv" hidden>
+          <div class="panel-heading">
+            <p>04</p>
             <h2>CV</h2>
           </div>
-          <div class="cv-row">
+          <article class="content-block cv-block">
             <div>
               <h3>Curriculum Vitae</h3>
               <p>
-                A downloadable CV placeholder is available now. Replace it with a
-                formal PDF when the final version is ready.
+                A downloadable CV placeholder is available now.
               </p>
             </div>
             <a class="download-button" href="./cv/Li-Yuxin-CV.md" download>Download CV</a>
-          </div>
+          </article>
         </section>
-      </div>
+      </section>
     </main>
 
     <footer class="site-footer">
