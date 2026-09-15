@@ -1,0 +1,6 @@
+import { notFound } from 'next/navigation';
+import { PageShell, Tags } from '@/components/site';
+import { projects } from '@/lib/content';
+export function generateStaticParams() { return projects.map(p=>({slug:p.slug})); }
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}) { const {slug}=await params; const p=projects.find(p=>p.slug===slug); return {title:`${p?.name??'Project'} — Yuxin Li`,description:p?.description}; }
+export default async function Project({params}:{params:Promise<{slug:string}>}) { const {slug}=await params; const p=projects.find(p=>p.slug===slug); if(!p) notFound(); return <PageShell active="Projects" eyebrow={p.date} title={p.name} description={p.event}><article className="article-body"><Tags items={p.tags}/><figure className="article-figure project-figure"><img src={`/images/${p.image}`} alt={p.alt}/><figcaption>Conceptual workflow · {p.category.toLowerCase()}</figcaption></figure><p className="article-lead">{p.description}</p><h2>What I worked on</h2><ul>{p.details.map(d=><li key={d}>{d}</li>)}</ul><div className="result-note"><p className="eyebrow">COMPETITION RESULT</p><p>{p.result}</p></div><a className="text-link" href="/projects/">← All projects</a></article></PageShell>; }

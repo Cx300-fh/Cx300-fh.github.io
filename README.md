@@ -1,29 +1,9 @@
-# 李雨欣 / Yuxin Li
+# Yuxin Li — personal homepage
 
-Personal homepage for 李雨欣 / `Cx300-fh`, redesigned with a clean academic profile structure inspired by PRISM.
+English academic portfolio for Yuxin Li, an undergraduate at Tsinghua University, Xinya College and the Department of Electronic Engineering.
 
-## Preview
+[Homepage](https://cx300-fh.github.io/) · [Blog](https://cx300-fh.github.io/blog/) · [CV](https://cx300-fh.github.io/cv/) · [Publications](https://cx300-fh.github.io/publications/) · [Gallery](https://cx300-fh.github.io/gallery/) · [Projects](https://cx300-fh.github.io/projects/)
 
-Open `index.html` directly in a browser.
+The website is published from the `main` branch, **`/docs` folder**. Editable source lives in `website/`; see [maintenance instructions](DEPLOY.md). The blog is intentionally empty and ready for future illustrated articles.
 
-## Deploy
-
-Create a repository named exactly:
-
-```txt
-Cx300-fh.github.io
-```
-
-Then upload these files to the repository root and push to `main`.
-
-GitHub Pages will publish the site at:
-
-```txt
-https://Cx300-fh.github.io
-```
-
-## Edit
-
-- `index.html`: edit Info, Professional, Bookshelf, and CV sections.
-- `assets/profile.jpg`: profile photo.
-- `cv/Li-Yuxin-CV.md`: replace this placeholder with your real CV, or upload a PDF and update the download link.
+The earlier root-level HTML, CSS, JavaScript, assets, and CV files are retained for reference and are not the active publishing source.

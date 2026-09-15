@@ -1,0 +1,5 @@
+import { ArrowUpRight } from 'lucide-react';
+import { PageShell, Tags } from '@/components/site';
+import { projects } from '@/lib/content';
+export const metadata = {title:'Projects — Yuxin Li',description:'Selected engineering projects in robot navigation, multi-agent control, and embedded hardware.'};
+export default function Projects() { return <PageShell active="Projects" eyebrow="ENGINEERING / SELECTED PROJECTS" title="Projects" description="From training a policy to getting a system to work in the real world."><div className="project-grid">{projects.map(p=><article className="content-card" key={p.slug}><a className="card-cover project-cover" href={`/projects/${p.slug}/`}><img src={`/images/${p.image}`} alt={p.alt} loading="lazy"/><span className="image-badge">{p.category}</span></a><div className="card-body"><p className="paper-meta">{p.date}</p><h2><a href={`/projects/${p.slug}/`}>{p.name}<ArrowUpRight size={20}/></a></h2><p>{p.description}</p><Tags items={p.tags}/><p className="project-result">{p.result}</p><a className="text-link" href={`/projects/${p.slug}/`}>View project <ArrowUpRight size={14}/></a></div></article>)}</div></PageShell>; }
