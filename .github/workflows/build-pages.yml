@@ -1,0 +1,58 @@
+name: Build and publish site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - '.github/workflows/build-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        working-directory: website
+        run: npm ci
+
+      - name: Build static site
+        working-directory: website
+        run: npm run build
+
+      - name: Replace published docs
+        run: |
+          rm -rf docs
+          mkdir -p docs
+          cp -a website/dist/client/. docs/
+          touch docs/.nojekyll
+
+      - name: Commit generated site
+        run: |
+          if git diff --quiet -- docs; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A docs
+          git commit -m 'Build website for GitHub Pages'
+          git push
