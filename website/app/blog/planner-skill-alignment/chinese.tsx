@@ -1,7 +1,5 @@
-import { references } from './references';
-import { Ref, Section, Figure } from './shared';
+import { Ref, Section, Figure, References } from './shared';
 export function ChineseSurvey(){return <>
-<div className="survey-status"><span>文献快照 / 2026.10.18</span><a href="#capability-map">探索能力关系图 ↘</a></div>
 <p className="essay-lede">一个机器人可能已经会抓杯子、会搬运、会放置，却依然无法可靠地把杯子放进托盘。问题可能发生在抓取之前：Planner 选中了不适用的技能；也可能发生在抓取之后：技能虽然完成了局部目标，却留下了无法继续放置的姿态。对于长程具身任务，更强的规划器与更强的动作策略并不会自动形成更强的系统。真正需要建立的，是双方关于目标、能力边界、执行结果与失败责任的共同理解。</p>
 <div className="survey-claim"><span>本文的中心判断</span><p>Planner–Skill 协作的一个关键问题，正从“有没有层级”转向“层级之间传递的信息是否足以支持可靠决策”。能力对齐既包含 Planner 对技能的认识，也包含技能对调用意图的服从。</p></div>
 <nav className="survey-toc" aria-label="文章目录"><a href="#problem">01 问题与边界</a><a href="#lineage">02 发展路线</a><a href="#alignment">03 双向对齐</a><a href="#capability-map">04 能力关系图</a><a href="#architecture">05 系统架构</a><a href="#credit">06 长程归因</a><a href="#evidence">07 实验证据</a><a href="#agenda">08 研究方向</a></nav>
@@ -97,7 +95,7 @@ export function ChineseSurvey(){return <>
 <p className="essay-conclusion">Planner 与 Skill 的发展，正在让机器人从拥有若干能力走向组织、验证和积累这些能力。下一步真正有价值的系统，应当能够说明自己为什么选择这项技能、相信哪些边界、凭什么判断完成，以及一次结果究竟改变了未来的哪一部分决策。让“将知兵、兵知将”成为可以测量的协作关系，才可能把更强的单个模型持续转化为更可靠的长程行为。</p>
 </Section>
 
-<section className="survey-references" id="references"><div className="figure-index">REFERENCES / PRIMARY SOURCES</div><h2>参考文献与阅读入口</h2><p className="references-note">共 18 项原始论文或作者项目页。新工作按截至 2026 年 10 月 18 日可见版本整理；具体评测协议以原文为准。“能力契约”、双闭环架构与阶段风险是本文的综合组织或研究建议。</p><ol>{references.map(r=><li key={r.id} id={`ref-${r.id}`}><span className="reference-number">[{r.id}]</span><div><a href={r.url} target="_blank" rel="noopener noreferrer">{r.name} ↗</a><span className="reference-title">{r.title}</span><span className="reference-meta">{r.authors} · {r.year}</span><p>{r.note}</p></div></li>)}</ol></section>
+<References/>
 <div className="survey-end"><a href="/blog/">← 返回 Blog</a><a href="/blog/reasoning-to-muscle-memory/">延伸阅读：Astra 与能力下沉 ↗</a></div>
 
 </>;}

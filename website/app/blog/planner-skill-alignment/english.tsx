@@ -1,9 +1,7 @@
-import { references } from './references';
-import { Ref as Citation, Section, Figure } from './shared';
+import { Ref as Citation, Section, Figure, References } from './shared';
 const Ref=({n}:{n:number})=><Citation n={n} en/>;
 
 export function EnglishSurvey(){return <>
-<div className="survey-status"><span>Literature snapshot / October 18, 2026</span><a href="#capability-map-en">Explore the capability atlas ↘</a></div>
 <p className="essay-lede">A robot may already know how to grasp a cup, carry it, and put it down, yet still fail to place the cup reliably in a tray. The failure may begin before grasping, when the planner selects an inapplicable skill. It may also emerge afterward, when a locally successful grasp leaves a pose that makes placement impossible. For long-horizon embodied tasks, a stronger planner and a stronger action policy do not automatically produce a stronger system. They need a shared understanding of goals, capability boundaries, execution outcomes, and the sources of failure.</p>
 <div className="survey-claim"><span>The central argument</span><p>A key question in planner–skill cooperation is shifting from whether a hierarchy exists to whether the information exchanged across it supports reliable decisions. Alignment requires both a planner that understands its skills and an executor that follows the particular invocation.</p></div>
 <nav className="survey-toc" aria-label="Article contents"><a href="#problem-en">01 Problem & scope</a><a href="#lineage-en">02 Research directions</a><a href="#alignment-en">03 Bidirectional alignment</a><a href="#capability-map-en">04 Capability atlas</a><a href="#architecture-en">05 System architecture</a><a href="#credit-en">06 Credit assignment</a><a href="#evidence-en">07 Experimental evidence</a><a href="#agenda-en">08 Open questions</a></nav>
@@ -98,6 +96,6 @@ export function EnglishSurvey(){return <>
 <p className="essay-conclusion">The development of planners and skills is moving robots from possessing individual capabilities toward organizing, verifying, and accumulating them. A useful next-generation system should be able to explain why it selected a skill, which boundaries it trusts, what establishes completion, and which future decisions change after an outcome. Making mutual understanding between planner and executor measurable is a path toward turning stronger individual models into more reliable long-horizon behavior.</p>
 </Section>
 
-<section className="survey-references" id="references-en"><div className="figure-index">REFERENCES / PRIMARY SOURCES</div><h2>References and reading paths</h2><p className="references-note">18 original papers or author-maintained project pages. Recent work is described using versions available by October 18, 2026; the original sources define their evaluation protocols. Capability contracts, the two-loop architecture, and stage-level risks are this survey’s synthesis or research proposals.</p><ol>{references.map(r=><li key={r.id} id={`ref-${r.id}-en`}><span className="reference-number">[{r.id}]</span><div><a href={r.url} target="_blank" rel="noopener noreferrer">{r.name} ↗</a><span className="reference-title">{r.title}</span><span className="reference-meta">{r.authors} · {r.year}</span><p>{r.noteEn}</p></div></li>)}</ol></section>
+<References en/>
 <div className="survey-end"><a href="/blog/">← Back to Blog</a><a href="/blog/reasoning-to-muscle-memory/">Related: Astra and capability consolidation ↗</a></div>
 </>;}

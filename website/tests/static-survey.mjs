@@ -14,7 +14,7 @@ check(()=>assert.equal((post.match(/<h1\b/g)||[]).length,1));
 check(()=>assert.equal((post.match(/id="ref-\d+-en"/g)||[]).length,18));
 check(()=>assert(post.includes('id="lang-toggle"')&&post.includes('id="lang-zh"')&&post.includes('for="lang-zh"')));
 check(()=>assert(post.includes('for="lang-toggle"')&&post.includes('class="lang-content english" lang="en"')));
-check(()=>assert(post.includes('Sharing the meaning of a particular invocation')&&post.includes('References and reading paths')));
+check(()=>assert(post.includes('Sharing the meaning of a particular invocation')&&post.includes('REFERENCES / FURTHER READING')));
 check(()=>assert(post.includes('index.html?lang=en')));
 
 check(()=>assert.equal((post.match(/data-planner-skill-frame/g)||[]).length,2));
@@ -41,5 +41,8 @@ for(let n=1;n<=18;n++)check(()=>assert(post.includes(`href="#ref-${n}-en"`)));
 const home=await readFile(resolve(root,'index.html'),'utf8');
 check(()=>assert(home.includes('id="writing"')&&home.includes('planner-skill-alignment/')&&home.includes('reasoning-to-muscle-memory/')));
 check(()=>assert(index.includes('Full text in English and Chinese.')));
+check(()=>assert(!post.includes('文献快照')&&!post.includes('Literature snapshot')));
+check(()=>assert(!post.includes('共 18 项原始论文')&&!post.includes('18 original papers or author-maintained project pages')));
+check(()=>assert(!home.includes('class="image-badge">Research Survey')&&!index.includes('class="image-badge">Research Survey')));
 const chars=(post.match(/[\u4e00-\u9fff]/g)||[]).length;
 console.log(JSON.stringify({status:'passed',checks,chinese_characters:chars,coverage:'exported routes, preserved scripts, iframe assets, anchors, citations, article index, old article, no private-site linkage',verification_limit:'No browser visual QA'},null,2));
