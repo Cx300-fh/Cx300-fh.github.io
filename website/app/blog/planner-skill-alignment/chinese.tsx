@@ -43,9 +43,8 @@ export function ChineseSurvey(){return <>
 </Section>
 
 <Section id="capability-map" index="04 / INTERACTIVE CAPABILITY ATLAS" title="把能力、边界与反馈放进同一张图">
-<p>下面的关系图保留十四个核心节点，并补全验证结果返回 Planner、长程归因分别更新高层选择与局部策略的路径。点击节点可查看定义、代表方法与关键问题；切换任务阶段后，图会突出相关依赖，下方同时显示需要的证据与风险。它是一种研究导航，而不是一套已经运行的机器人架构。</p>
-<figure className="atlas-figure"><div className="figure-index">FIGURE 01 / EXPLORE THE INTERFACE</div><iframe src="/interactives/planner-skill/index.html" title="Planner 与 Skill 交互能力图及五阶段风险分析" data-planner-skill-frame loading="lazy" className="capability-frame"/><figcaption>以“把杯子放进托盘”为贯穿示例。先点击“能力契约”，再比较接近抓取、搬运放置与失败恢复三个阶段：同一项技能的价值，依赖它在整个任务链中的位置。<a href="/interactives/planner-skill/" target="_blank" rel="noopener noreferrer">独立窗口探索 ↗</a></figcaption></figure>
-<p>图中的“可靠性”刻意没有标成功概率。目前这里没有接入指定机器人和策略上的执行样本。文本中的定性风险用于提出验证任务，例如“是否抓到了指定对象”“是否在指定条件满足后停止”，而不是代替经验数据。将未知显式保留，比用看似精确的分数掩盖能力空白更有研究价值。</p>
+<p>下面的关系图保留十四个核心节点，并补全验证结果返回 Planner、长程归因分别更新高层选择与局部策略的路径。点击节点可查看定义、代表方法与关键问题；切换任务阶段后，图会突出相关依赖，下方同时显示需要的证据与风险。</p>
+<figure className="atlas-figure"><div className="figure-index">FIGURE 01 / EXPLORE THE INTERFACE</div><iframe src="/interactives/planner-skill/index.html" title="Planner 与 Skill 交互能力图及五阶段风险分析" data-planner-skill-frame loading="lazy" className="capability-frame"/><figcaption>点击节点查看能力，切换阶段比较依赖与风险。<a href="/interactives/planner-skill/" target="_blank" rel="noopener noreferrer">独立窗口探索 ↗</a></figcaption></figure>
 <noscript><p>交互图需要 JavaScript。正文、系统架构图与参考文献仍可阅读；<a href="/interactives/planner-skill/">也可进入图谱独立页面</a>。</p></noscript>
 </Section>
 
