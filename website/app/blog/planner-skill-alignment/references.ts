@@ -1,0 +1,20 @@
+export const references = [
+  {id:1,name:'Options',title:'Between MDPs and semi-MDPs: A Framework for Temporal Abstraction in Reinforcement Learning',authors:'Sutton, Precup & Singh',year:'1999',url:'https://doi.org/10.1016/S0004-3702(99)00052-1',note:'时间抽象与技能边界的理论基础。'},
+  {id:2,name:'SayCan',title:'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances',authors:'Ahn et al.',year:'2022',url:'https://arxiv.org/abs/2204.01691',note:'把语言上的相关性与机器人技能的可行性结合。'},
+  {id:3,name:'Inner Monologue',title:'Embodied Reasoning through Planning with Language Models',authors:'Huang et al.',year:'2022',url:'https://arxiv.org/abs/2207.05608',note:'以场景、成功检测等反馈支持闭环重规划。'},
+  {id:4,name:'Code as Policies',title:'Language Model Programs for Embodied Control',authors:'Liang et al.',year:'2022 / ICRA 2023',url:'https://code-as-policies.github.io/',note:'通过可执行程序组织感知、几何与控制 API。'},
+  {id:5,name:'VoxPoser',title:'Composable 3D Value Maps for Robotic Manipulation with Language Models',authors:'Huang et al.',year:'2023',url:'https://arxiv.org/abs/2307.05973',note:'把语言约束落到三维价值图和运动规划。'},
+  {id:6,name:'OpenVLA',title:'An Open-Source Vision-Language-Action Model',authors:'Kim et al.',year:'2024',url:'https://arxiv.org/abs/2406.09246',note:'通用视觉语言动作策略的一项代表；不等于完整工具接口。'},
+  {id:7,name:'VLAs-as-Tools / TAPT',title:'Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models',authors:'Lei et al.',year:'2026 · v2',url:'https://arxiv.org/abs/2605.13119v2',note:'调用对齐、工具族接口与执行反馈；本文核对 2026-10-12 修订版。'},
+  {id:8,name:'Cortex',title:'A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation',authors:'Peng et al.',year:'2026',url:'https://arxiv.org/abs/2607.05377',note:'结构化子任务、记忆与进度验证；同时参考作者项目页。'},
+  {id:9,name:'Harness VLA',title:'Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents',authors:'Zhang et al.',year:'2026 · v5',url:'https://arxiv.org/abs/2607.08448v5',note:'冻结 VLA 与解析原语的组合，强调适用范围、重新摆位与记忆。'},
+  {id:10,name:'What Matters in Orchestrating Robot Policies',title:'A Systematic Study of Hierarchical VLA Agents',authors:'Hu et al.',year:'2026',url:'https://jiahenghu.github.io/hi-vla/',note:'系统比较编排与接口设计，避免把收益全部归于模型规模。'},
+  {id:11,name:'CaP-X',title:'A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation',authors:'Fu et al.',year:'2026 · v2',url:'https://arxiv.org/abs/2603.22435v2',note:'控制抽象、交互方式、感知接地与测试时计算的系统评测。'},
+  {id:12,name:'EmbodiedSWE',title:'Coding Agents for Long Horizon Dexterous Robotics',authors:'You, Shen, Liu et al.',year:'2026',url:'https://arxiv.org/abs/2609.27308',note:'代码求解、验证解多样化与 VLA 训练，连接求解和学习。'},
+  {id:13,name:'GAE',title:'High-Dimensional Continuous Control Using Generalized Advantage Estimation',authors:'Schulman et al.',year:'2015 / ICLR 2016',url:'https://arxiv.org/abs/1506.02438',note:'估计 advantage 的偏差与方差权衡。'},
+  {id:14,name:'PPO',title:'Proximal Policy Optimization Algorithms',authors:'Schulman et al.',year:'2017',url:'https://arxiv.org/abs/1707.06347',note:'策略优化方法；不能替代价值表示、奖励和归因设计。'},
+  {id:15,name:'RUDDER',title:'Return Decomposition for Delayed Rewards',authors:'Arjona-Medina et al.',year:'NeurIPS 2019',url:'https://papers.neurips.cc/paper_files/paper/2019/hash/16105fb9cc614fc29e1bda00dab60d41-Abstract.html',note:'回报分解与延迟奖励的重分配。'},
+  {id:16,name:'LIBERO',title:'Benchmarking Knowledge Transfer for Lifelong Robot Learning',authors:'Liu et al.',year:'2023',url:'https://arxiv.org/abs/2306.03310',note:'任务套件、程序性知识迁移与长期学习评测背景。'},
+  {id:17,name:'RoboDojo',title:'A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies',authors:'Chen et al.',year:'2026',url:'https://arxiv.org/abs/2607.04434',note:'42 个仿真与 18 个真实任务；策略开发和正式评测需分开。'},
+  {id:18,name:'EmbodiedEvo',title:'Self-Evolving Coding Agent For Physical Intelligence',authors:'Li et al.',year:'2026-10 · v2',url:'https://arxiv.org/abs/2610.18867v2',note:'近期补充：把物理反馈沉淀为代码技能与诊断经验；不将自演化直接等同于梯度式 RL。'}
+];

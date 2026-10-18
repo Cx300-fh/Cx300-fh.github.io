@@ -1,5 +1,5 @@
 import { readFile, writeFile, rm, readdir, mkdir, rename } from 'node:fs/promises';
-import { dirname, relative, resolve, sep } from 'node:path';
+import { basename, dirname, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const output = fileURLToPath(new URL('../dist/client/', import.meta.url));
 async function walk(directory) {
@@ -9,7 +9,7 @@ async function walk(directory) {
 // Vinext exports clean routes as .html files. GitHub Pages needs a directory
 // index for trailing-slash URLs; normalize before computing asset prefixes.
 for (const file of (await walk(output)).filter(file => file.endsWith('.html'))) {
-  if (['index.html','404.html'].includes(relative(output, file))) continue;
+  if (['index.html','404.html'].includes(basename(file))) continue;
   const destination = resolve(file.slice(0, -5), 'index.html');
   await mkdir(dirname(destination), { recursive: true });
   await rename(file, destination);
@@ -22,7 +22,8 @@ for (const file of files.filter(file => file.endsWith('.html'))) {
   let html = await readFile(file, 'utf8');
   // Server-rendered pages use standard links and progressive enhancement.
   // Relative URLs keep every route portable across user and project Pages.
-  html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+  // Preserve only explicitly marked native interactive modules; discard framework hydration.
+  html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, tag => /\bdata-static-keep(?:[=\s>])/.test(tag) ? tag : '');
   html = html.replace(/<link\b[^>]*>/gi, tag => /rel="modulepreload"|as="script"/.test(tag) ? '' : tag);
   html = html.replace(/\b(href|src)="\/(?!\/)([^"]*)"/g, (_, attr, value) => `${attr}="${prefix}${value}"`);
   html = html.replace('</body>', `<script src="${prefix}interactions.js" defer></script></body>`);
@@ -35,3 +36,4 @@ await rm(resolve(output, '.vite'), { recursive: true, force: true });
 await rm(resolve(output, 'vinext-client-entry-manifest.json'), { force: true });
 await writeFile(resolve(output, '.nojekyll'), '');
 console.log(`Portable static export ready: ${count} HTML pages in dist/client`);
+
