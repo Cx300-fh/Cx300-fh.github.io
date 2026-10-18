@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="810" viewBox="0 0 1200 810" role="img" aria-labelledby="title desc">
 <title id="title">Online execution and offline learning in planner–skill cooperation</title><desc id="desc">The planner proposes calls using observations and capability evidence. A contract gate and router select code or VLA tools. Verified outcomes return to planning. Offline traces support attribution and updates to selection, skills, and capability evidence.</desc>
-<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#8b9d78"/></marker><marker id="arl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#9f8aaa"/></marker></defs>
-<rect width="1200" height="850" fill="#f4f5ee"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#819474"/></marker><marker id="arl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#9582a3"/></marker></defs>
+<rect width="1200" height="810" fill="#fbfaf6"/>
 <g font-family="Arial,'Noto Sans CJK SC','Microsoft YaHei',sans-serif">
-<text x="34" y="34" fill="#9b7a5c" font-size="13" letter-spacing="1.6">01 / ONLINE EXECUTION</text>
-<text x="34" y="67" fill="#4f6844" font-size="26">Online: evidence-gated execution</text>
-<rect x="33" y="93" width="1134" height="440" rx="10" fill="#fafbf6" stroke="#d2dcc5"/>
-<g fill="none" stroke="#8b9d78" stroke-width="2" marker-end="url(#ar)">
+
+<text x="34" y="67" fill="#344c3b" font-size="26">Online execution</text>
+<rect x="33" y="93" width="1134" height="440" rx="14" fill="#fffefb" stroke="#d6ddd0"/>
+<g fill="none" stroke="#819474" stroke-width="2" marker-end="url(#ar)">
 <path d="M257 177H331"/><path d="M561 177H642"/><path d="M872 177H942"/>
 <path d="M1053 224V279H854V311"/><path d="M1053 279H1081V311"/>
 <path d="M854 390V422H900V442"/><path d="M1081 390V422H1026V442"/>
@@ -14,29 +14,29 @@
 <path d="M189 311V275H445V224"/>
 <path d="M76 311V265H145V224"/>
 </g>
-<g><rect x="62" y="129" width="195" height="95" rx="6" fill="#edf2e5" stroke="#b0c19c"/><text x="82" y="160" fill="#5e7850" font-size="13">OBSERVATION / HISTORY</text><text x="82" y="193" fill="#3b5931" font-size="18">Observe &amp; infer</text></g>
-<g><rect x="331" y="129" width="230" height="95" rx="6" fill="#f5e9dc" stroke="#bd9877"/><text x="353" y="160" fill="#a57952" font-size="13">GOAL → SUBGOAL</text><text x="353" y="193" fill="#8f5b37" font-size="18">Planner / selection</text></g>
-<g><rect x="642" y="129" width="230" height="95" rx="6" fill="#edf3e4" stroke="#b0c49a"/><text x="662" y="160" fill="#7d9569" font-size="13">CONDITIONS &amp; EVIDENCE</text><text x="662" y="193" fill="#506d3f" font-size="18">Registry &amp; contract</text></g>
-<g><rect x="942" y="129" width="195" height="95" rx="6" fill="#edf3e4" stroke="#b0c49a"/><text x="964" y="160" fill="#7d9569" font-size="13">TOOL ROUTING</text><text x="964" y="193" fill="#506d3f" font-size="18">Tool routing</text></g>
+<g><rect x="62" y="129" width="195" height="95" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="82" y="184" fill="#344c3b" font-size="18">Observe &amp; infer</text></g>
+<g><rect x="331" y="129" width="230" height="95" rx="10" fill="#f7ece5" stroke="#bd9877"/><text x="353" y="184" fill="#964f37" font-size="18">Planner / selection</text></g>
+<g><rect x="642" y="129" width="230" height="95" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="662" y="184" fill="#344c3b" font-size="18">Registry &amp; contract</text></g>
+<g><rect x="942" y="129" width="195" height="95" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="964" y="184" fill="#344c3b" font-size="18">Tool routing</text></g>
 <text x="591" y="161" text-anchor="middle" fill="#859772" font-size="12">Propose call</text>
-<g><rect x="748" y="311" width="212" height="79" rx="6" fill="#edf3e4" stroke="#b0c49a"/><text x="769" y="342" fill="#516e40" font-size="17">Code / control</text><text x="769" y="369" fill="#7c9368" font-size="12">Logic, geometry, feedback</text></g>
-<g><rect x="978" y="311" width="158" height="79" rx="6" fill="#edf3e4" stroke="#b0c49a"/><text x="997" y="342" fill="#516e40" font-size="17">VLA skill</text><text x="997" y="369" fill="#7c9368" font-size="12">Local visual control</text></g>
-<g><rect x="785" y="442" width="352" height="62" rx="6" fill="#e5ecdd" stroke="#a9bc95"/><text x="961" y="480" text-anchor="middle" fill="#587146" font-size="17">Controller → robot / environment</text></g>
-<g><rect x="387" y="428" width="230" height="85" rx="6" fill="#f0f3e9" stroke="#b0c19c"/><text x="409" y="460" fill="#5f794f" font-size="17">Outcome verification</text><text x="409" y="488" fill="#7b9266" font-size="12">Progress, results, anomalies</text></g>
-<g><rect x="62" y="311" width="248" height="81" rx="6" fill="#f4eee2" stroke="#c4b18a"/><text x="83" y="343" fill="#8f794f" font-size="17">Update belief / recover</text><text x="83" y="372" fill="#9f906c" font-size="12">Observe, re-stage, or replan</text></g>
+<g><rect x="748" y="311" width="212" height="79" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="769" y="342" fill="#344c3b" font-size="17">Code / control</text><text x="769" y="369" fill="#687b60" font-size="12">Logic, geometry, feedback</text></g>
+<g><rect x="978" y="311" width="158" height="79" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="997" y="342" fill="#344c3b" font-size="17">VLA skill</text><text x="997" y="369" fill="#687b60" font-size="12">Local visual control</text></g>
+<g><rect x="785" y="442" width="352" height="62" rx="10" fill="#e8eee4" stroke="#a9bc95"/><text x="961" y="480" text-anchor="middle" fill="#344c3b" font-size="17">Controller → robot / environment</text></g>
+<g><rect x="387" y="428" width="230" height="85" rx="10" fill="#f0f4ed" stroke="#b8c7ad"/><text x="409" y="460" fill="#344c3b" font-size="17">Outcome verification</text><text x="409" y="488" fill="#687b60" font-size="12">Progress, results, anomalies</text></g>
+<g><rect x="62" y="311" width="248" height="81" rx="10" fill="#f7ece5" stroke="#c4b18a"/><text x="83" y="343" fill="#964f37" font-size="17">Update belief / recover</text><text x="83" y="372" fill="#8d7866" font-size="12">Observe, re-stage, or replan</text></g>
 <text x="390" y="270" fill="#9e8b65" font-size="13">Continue or intervene?</text>
 <text x="655" y="462" fill="#859772" font-size="13">Outcome evidence</text>
-<text x="35" y="580" fill="#9b7a5c" font-size="13" letter-spacing="1.6">02 / OFFLINE LEARNING &amp; VALIDATION</text>
-<text x="35" y="615" fill="#73607f" font-size="26">Offline: experience improves cooperation</text>
-<rect x="33" y="641" width="1134" height="177" rx="10" fill="#f5f2f6" stroke="#d6cddd"/>
-<g fill="none" stroke="#9f8aaa" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arl)">
+
+<text x="35" y="615" fill="#70617e" font-size="26">Offline learning</text>
+<rect x="33" y="641" width="1134" height="151" rx="14" fill="#f3f0f6" stroke="#d6cddd"/>
+<g fill="none" stroke="#9582a3" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arl)">
 <path d="M310 719H384"/><path d="M644 719H710"/><path d="M908 719H965"/>
 <path d="M501 513V551H18V725H62"/>
 <path d="M1066 677V583H1163V103H757V129"/>
 </g>
-<g><rect x="62" y="677" width="248" height="96" rx="6" fill="#fffdfd" stroke="#c2b1ce"/><text x="83" y="711" fill="#826e8f" font-size="17">Calls &amp; execution traces</text><text x="83" y="742" fill="#97899f" font-size="12">Goals, versions, outcomes, costs</text></g>
-<g><rect x="384" y="677" width="260" height="96" rx="6" fill="#fffdfd" stroke="#c2b1ce"/><text x="405" y="711" fill="#826e8f" font-size="17">Attribution &amp; interventions</text><text x="405" y="742" fill="#97899f" font-size="12">Value estimates ≠ causal proof</text></g>
-<g><rect x="710" y="677" width="198" height="96" rx="6" fill="#fffdfd" stroke="#c2b1ce"/><text x="731" y="711" fill="#826e8f" font-size="17">Update policies</text><text x="731" y="742" fill="#97899f" font-size="12">Selection, skills, memory</text></g>
-<g><rect x="965" y="677" width="172" height="96" rx="6" fill="#fffdfd" stroke="#c2b1ce"/><text x="985" y="711" fill="#826e8f" font-size="17">Registry updates</text><text x="985" y="742" fill="#97899f" font-size="12">Boundaries &amp; evidence</text></g>
-<text x="658" y="797" text-anchor="middle" fill="#9b8ea2" font-size="13">Revalidate after updates: capability evidence is tied to the policy version</text>
+<g><rect x="62" y="677" width="248" height="96" rx="10" fill="#fffefb" stroke="#c2b1ce"/><text x="83" y="711" fill="#70617e" font-size="17">Calls &amp; execution traces</text><text x="83" y="742" fill="#82778c" font-size="12">Goals, versions, outcomes, costs</text></g>
+<g><rect x="384" y="677" width="260" height="96" rx="10" fill="#fffefb" stroke="#c2b1ce"/><text x="405" y="711" fill="#70617e" font-size="17">Attribution &amp; interventions</text><text x="405" y="742" fill="#82778c" font-size="12">Decisions · actions · returns</text></g>
+<g><rect x="710" y="677" width="198" height="96" rx="10" fill="#fffefb" stroke="#c2b1ce"/><text x="731" y="711" fill="#70617e" font-size="17">Update policies</text><text x="731" y="742" fill="#82778c" font-size="12">Selection, skills, memory</text></g>
+<g><rect x="965" y="677" width="172" height="96" rx="10" fill="#fffefb" stroke="#c2b1ce"/><text x="985" y="711" fill="#70617e" font-size="17">Registry updates</text><text x="985" y="742" fill="#82778c" font-size="12">Boundaries &amp; evidence</text></g>
+
 </g></svg>
