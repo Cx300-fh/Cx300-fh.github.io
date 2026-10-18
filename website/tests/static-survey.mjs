@@ -12,7 +12,7 @@ check(()=>assert.equal((post.match(/id="ref-\d+"/g)||[]).length,18));
 for(const id of ['problem','lineage','alignment','capability-map','architecture','credit','evidence','agenda'])check(()=>{assert(post.includes(`id="${id}"`));assert(post.includes(`href="#${id}"`));});
 check(()=>assert.equal((post.match(/<h1\b/g)||[]).length,1));
 check(()=>assert.equal((post.match(/id="ref-\d+-en"/g)||[]).length,18));
-check(()=>assert(post.includes('id="lang-toggle"')&&post.includes('htmlFor="lang-toggle"')===false));
+check(()=>assert(post.includes('id="lang-toggle"')&&post.includes('id="lang-zh"')&&post.includes('for="lang-zh"')));
 check(()=>assert(post.includes('for="lang-toggle"')&&post.includes('class="lang-content english" lang="en"')));
 check(()=>assert(post.includes('Sharing the meaning of a particular invocation')&&post.includes('References and reading paths')));
 check(()=>assert(post.includes('index.html?lang=en')));
