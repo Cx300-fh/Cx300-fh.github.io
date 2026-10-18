@@ -1,7 +1,6 @@
 import { Ref, Section, Figure, References } from './shared';
 export function ChineseSurvey(){return <>
 <p className="essay-lede">一个机器人可能已经会抓杯子、会搬运、会放置，却依然无法可靠地把杯子放进托盘。问题可能发生在抓取之前：Planner 选中了不适用的技能；也可能发生在抓取之后：技能虽然完成了局部目标，却留下了无法继续放置的姿态。对于长程具身任务，更强的规划器与更强的动作策略并不会自动形成更强的系统。真正需要建立的，是双方关于目标、能力边界、执行结果与失败责任的共同理解。</p>
-<div className="survey-claim"><span>本文的中心判断</span><p>Planner–Skill 协作的一个关键问题，正从“有没有层级”转向“层级之间传递的信息是否足以支持可靠决策”。能力对齐既包含 Planner 对技能的认识，也包含技能对调用意图的服从。</p></div>
 <nav className="survey-toc" aria-label="文章目录"><a href="#problem">01 问题与边界</a><a href="#lineage">02 发展路线</a><a href="#alignment">03 双向对齐</a><a href="#capability-map">04 能力关系图</a><a href="#architecture">05 系统架构</a><a href="#credit">06 长程归因</a><a href="#evidence">07 实验证据</a><a href="#agenda">08 研究方向</a></nav>
 
 
@@ -26,7 +25,6 @@ export function ChineseSurvey(){return <>
 <p>What Matters in Orchestrating Robot Policies 进一步系统考察规划器、动作策略、终止机制、观测与记忆的设计。<Ref n={10}/>它提醒我们，同一底层策略可以因为编排方式不同而产生明显不同的长程表现；反过来，某个系统的提升也不能自动解释为“Planner 更聪明了”。指令跟随、成功检测和状态表示，都可能是改变结果的具体因素。</p>
 <h3>从解决一次任务到形成可复用能力</h3>
 <p>EmbodiedSWE 将编程智能体的角色从在线执行者扩展到能力生产者：先获得验证通过的代码解，再通过多层次变化产生轨迹，训练机器人策略。<Ref n={12}/>这使昂贵的求解成本有机会在后续大量执行中被分摊。近期的 EmbodiedEvo 也关注将物理反馈沉淀为可复用代码技能与诊断经验。<Ref n={18}/>这些路线的共同目标是保留探索所得，但保留的载体不同：可以是代码、经验规则，也可以是策略参数。哪种载体更适合当前任务，取决于复用次数、场景变化、反馈成本和动作精度要求。</p>
-<div className="survey-note"><b>编排系统不自动等于 Agentic RL。</b><p>闭环调用、记忆更新和代码修复都可以在不更新策略参数的情况下发生。只有明确了可学习的决策变量、环境回报与优化过程，才能具体讨论强化学习发生在哪一层。CaP-X 中的 CaP-RL、调用对齐的策略训练，与纯推理时编排应分别分析。</p></div>
 </Section>
 
 <Section id="alignment" index="03 / BIDIRECTIONAL ALIGNMENT" title="让双方共享一次调用的含义">
